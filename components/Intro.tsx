@@ -46,7 +46,7 @@ function Intro() {
         </div>
       </div>
 
-      <motion.p
+      <motion.h1
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         className="mb-10 mt-4 px-4 font-medium text-2xl !leading-[1.5] sm:text-3xl"
@@ -56,7 +56,7 @@ function Intro() {
         Tailwind CSS. I also have experience working with Node.js, Express, and
         MongoDB. I&apos;m passionate about learning new technologies and
         building products that solve real-world problems.
-      </motion.p>
+      </motion.h1>
 
       <motion.div
         initial={{ opacity: 0, y: 100 }}
@@ -81,10 +81,18 @@ function Intro() {
           Download CV{" "}
           <HiDownload className="group-hover:translate-x-1 transition opacity-70 " />
         </a>
-        <a className="bg-white p-4 flex text-gray-700 items-center gap-2 rounded-full focus:scale-110 hover:scale-110 active:scale-105 transition group border border-black/10">
+        <a
+          href="http://linkedin.com"
+          target="_blank"
+          className="bg-white p-4 flex text-gray-700 items-center gap-2 rounded-full focus:scale-110 hover:scale-110 hover:text-gray-950 active:scale-105 transition group border border-black/10"
+        >
           <BsLinkedin />
         </a>
-        <a className="bg-white p-4 flex text-gray-700 items-center gap-2 rounded-full focus:scale-110 hover:scale-110 active:scale-105 transition group border border-black/10">
+        <a
+          href="http://github.com"
+          target="_blank"
+          className="bg-white p-4 flex text-gray-700 items-center gap-2 rounded-full focus:scale-110 hover:scale-110 hover:text-gray-950 active:scale-105 transition group border border-black/10"
+        >
           <BsGithub />
         </a>
       </motion.div>
