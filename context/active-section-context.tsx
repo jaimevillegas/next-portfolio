@@ -15,7 +15,7 @@ type ActiveSectionContextType = {
   setActiveSection: React.Dispatch<React.SetStateAction<SectionName>>;
 };
 
-const ActiveSectionContext =
+export const ActiveSectionContext =
   React.createContext<ActiveSectionContextType | null>(null);
 
 export default function ActiveSectionContextProvider({
@@ -33,4 +33,14 @@ export default function ActiveSectionContextProvider({
       {children}
     </ActiveSectionContext.Provider>
   );
+}
+
+export function useActiveSectionContext() {
+  const context = React.useContext(ActiveSectionContext);
+  if (!context) {
+    throw new Error(
+      "useActiveSectionContext must be used within an ActiveSectionContextProvider"
+    );
+  }
+  return context;
 }
